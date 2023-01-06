@@ -3,12 +3,15 @@ import express from "express";
 let articlesInfo = [{
     name:'learn-react',
     upvotes:0,
+    comments:[],
 },{
     name:'learn-node',
     upvotes:0,
+    comments:[],
 },{
     name:'learn-mongodb',
     upvotes:0,
+    comments:[],
 }]
 
 const app = express();
@@ -34,7 +37,18 @@ app.put('/api/articles/:name/upvote',(req,res)=>{
     }else{
         res.send("That article doesnt exist");
     }
+})
 
+app.post('/api/articles/:name/comments',(req,res)=>{
+    const {name} = req.params;
+    const {postedBy,text} = req.body;
+    const article = articlesInfo.find(a => a.name === name);
+    if(article){
+        article.comments.push({postedBy,text});
+        res.send(article.comments);
+    }else{
+        req.send("This article does not exist");
+    }
 })
 
 app.listen(8000, ()=>{
