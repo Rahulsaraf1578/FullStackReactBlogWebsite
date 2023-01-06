@@ -45,7 +45,7 @@ app.post('/api/articles/:name/comments',(req,res)=>{
     const article = articlesInfo.find(a => a.name === name);
     if(article){
         article.comments.push({postedBy,text});
-        res.send(article.comments);
+        res.send(article.comments); 
     }else{
         req.send("This article does not exist");
     }
