@@ -1,1 +1,17 @@
-This is the final full stack 
+I was wrong in above condition you just have to run mongodb server and then run mongo no need to create new database every time.
+This is the final version of the project which will not run in desktop. Beacuse at this stage we have made a local database and every time we are downloading it from github that gets deleted so we have to make new.
+
+First run frontend and backend by using following commands
+
+Frontend :- npm start
+BackEnd :- npm run dev
+
+Go to backend
+1. Run this command in terminal
+mongod --dbpath ./{mongodata}/
+
+2. Then in other terminal run
+Mongo
+
+
+
