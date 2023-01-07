@@ -59,7 +59,7 @@ app.post('/api/articles/:name/comments',async(req,res)=>{
     
 
     if(article){
-        res.json(article.comments); 
+        res.json(article); 
     }else{
         req.send("This article does not exist");
     }
