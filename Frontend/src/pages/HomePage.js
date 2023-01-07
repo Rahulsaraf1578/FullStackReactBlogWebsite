@@ -1,4 +1,4 @@
-const Home = () => (
+const HomePage = () => (
     <>
     <h1>Hello, welcome to my blog!</h1>
     <p>
@@ -28,4 +28,4 @@ const Home = () => (
     </>
 );
 
-export default Home;
+export default HomePage;
