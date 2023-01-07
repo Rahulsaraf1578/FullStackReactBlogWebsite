@@ -40,7 +40,7 @@ app.put('/api/articles/:name/upvote',async (req,res)=>{
     const article = await db.collection('articles').findOne({name})
     
     if(article){
-        res.send(`The ${name} article now has ${article.upvotes} upvotes`)
+        res.send(article)
     }else{
         res.send("That article doesnt exist");
     }
