@@ -5,7 +5,7 @@
 /.pnp
 .pnp.js
 ./credentials.json
-mongodata
+/mongodata
 
 # testing
 /coverage
