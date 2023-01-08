@@ -6,6 +6,8 @@
 .pnp.js
 ./credentials.json
 /mongodata
+/mongodata/journal
+/mongodata/diagnostic.data
 
 # testing
 /coverage
